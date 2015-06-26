@@ -10,6 +10,9 @@ module.exports = function(config) {
     files : [
       'node_modules/chai/chai.js',
       'node_modules/angular/angular.js',
+      'node_modules/textangular/dist/textAngular-rangy.min.js',
+      'node_modules/textangular/dist/textAngular-sanitize.min.js',
+      'node_modules/textangular/dist/textAngular.min.js',
       'node_modules/angular-route/angular-route.js',
       'node_modules/angular-mocks/angular-mocks.js',
       'client/js/**/*.js',

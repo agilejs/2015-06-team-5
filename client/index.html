@@ -1,10 +1,11 @@
-<!doctype html>
 <html ng-app="MovieDatabase" ng-controller="AppController">
 <head>
     <meta charset="utf-8">
     <base href="/">
     <title ng-bind="title">Movie Database</title>
     <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/textangular/dist/textAngular.css"/>
+    <link rel="stylesheet" href="/font-awesome/css/font-awesome.css"/>
     <link rel="stylesheet" href="/css/app.css">
 
 </head>
@@ -32,17 +33,17 @@
                     </div>
                 </form>
             </div>
-        </div>
-    </nav>
+        </nav>
+        <div class="container" ng-view="ng-view"></div>
 
-    <div class="container" ng-view>
+        <script src="/angular/angular.js"></script>
+        <script src="/angular-route/angular-route.js"></script>
+        <script src='/textangular/dist/textAngular-rangy.min.js'></script>
+        <script src='/textangular/dist/textAngular-sanitize.min.js'></script>
+        <script src='/textangular/dist/textAngular.min.js'></script>
+        <script src="/js/app.js"></script>
+        <script src="/js/service.js"></script>
+        <script src="/js/controller.js"></script>
+    </body>
 
-    </div>
-
-    <script src="/angular/angular.js"></script>
-    <script src="/angular-route/angular-route.js"></script>
-    <script src="/js/app.js"></script>
-    <script src="/js/service.js"></script>
-    <script src="/js/controller.js"></script>
-</body>
 </html>

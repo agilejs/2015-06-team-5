@@ -10,12 +10,11 @@
   </div>
   <div class="form-group">
     <label class="control-label" for="inputDescription">Description</label>
-    <textarea rows="5"
-              id="inputDescription"
-              name="description"
-              class="form-control"
-              ng-model="movie.description">
-    </textarea>
+    <div class="controls">
+      <text-angular ng-model="movie.description"
+                    name="description"
+                    class="movie-description-editor">
+      </text-angular>
     </div>
   </div>
   <div>
