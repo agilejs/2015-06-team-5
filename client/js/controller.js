@@ -14,9 +14,6 @@
         function($scope, $location, movieList) {
 
         $scope.movies = movieList.data;
-        $scope.add = function () {
-            $location.path('/movies/new');
-        };
         $scope.order = 'title';
         $scope.changeOrder = function(){
             $scope.order  = $scope.order=='title' ? '-title' : 'title';
