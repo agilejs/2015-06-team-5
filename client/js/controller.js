@@ -17,6 +17,10 @@
         $scope.add = function () {
             $location.path('/movies/new');
         };
+        $scope.order = 'title';
+        $scope.changeOrder = function(){
+            $scope.order  = $scope.order=='title' ? '-title' : 'title';
+        }
     });
 
     app.controller('MoviesAddController',
@@ -59,6 +63,15 @@
 
     app.controller('NotFoundController', ProblemController);
     app.controller('ErrorController', ProblemController);
+
+    app.controller('NavController',
+        function ($scope, $location, $route) {
+
+        $scope.activePath = null;
+        $scope.$on('$routeChangeSuccess',
+          function() {
+            $scope.activePath = $location.path();
+        });
+    });
+
 })();
-
-
