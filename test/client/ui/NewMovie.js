@@ -2,6 +2,7 @@ module.exports = function() {
     'use strict';
 
     this.title = element(by.model('movie.title'));
+    this.releaseYear = element(by.model('movie.releaseYear'));
     this.description = element(by.model('movie.description'));
     this.save = element(by.css('.btn-primary'));
     //this.ptor = protractor.getInstance();
@@ -17,6 +18,8 @@ module.exports = function() {
         this.description.click().then(function(){
             browser.actions().sendKeys(desc).perform();
         });
+        this.releaseYear.clear();
+        this.releaseYear.sendKeys(releaseYear);
         this.save.click();
     };
 };

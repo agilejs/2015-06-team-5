@@ -3,6 +3,11 @@
 <dl class="dl-horizontal">
   <dt>Description</dt>
   <dd ng-bind-html="movie.description"></dd>
+
+</dl>
+<dl class="dl-horizontal">
+  <dt>Release Year</dt>
+  <dd>{{movie.releaseYear === undefined ? 'unknown' : movie.releaseYear}}</dd>
 </dl>
 
 <a href="/movies/{{movie.id}}/edit" title="Edit movie" class="btn btn-default">
@@ -12,3 +17,5 @@
 <button ng-click="delete()" title="Delete movie" class="btn btn-danger">
     Delete
 </button>
+
+<a twitter data-text="Check out this movie: {{movie.title}}" data-url="http://agilejs-team-5.herokuapp.com/movies/{{movie.id}}"></a>

@@ -10,15 +10,17 @@
     app.controller('WelcomeController',
         function($scope, $location, movieList) {
         $scope.movies = movieList.data;
+        $scope.order = 'title';
     });
 
     app.controller('MoviesListController',
         function($scope, $location, movieList) {
 
         $scope.movies = movieList.data;
+
         $scope.order = 'title';
-        $scope.changeOrder = function(){
-            $scope.order  = $scope.order==='title' ? '-title' : 'title';
+        $scope.changeOrder = function() {
+            $scope.order  = $scope.order === 'title' ? '-title' : 'title';
         };
     });
 
@@ -72,5 +74,24 @@
             $scope.activePath = $location.path();
         });
     });
+
+    app.directive('twitter', [
+        function() {
+            return {
+                link: function(scope, element, attr) {
+                    setTimeout(function() {
+                        twttr.widgets.createShareButton(
+                            attr.url,
+                            element[0],
+                            function(el) {}, {
+                                count: 'none',
+                                text: attr.text
+                            }
+                        );
+                    });
+                }
+            };
+        }
+    ]);
 
 })();

@@ -15,8 +15,6 @@ before_deploy:
 - neo4j-community-2.1.7/bin/neo4j stop
 - rm -rf neo4j-community-2.1.7 neo4j-community-2.1.7-unix.tar.gz
 deploy:
-  on:
-    branch: master
   provider: heroku
   app: agilejs-team-5
   skip_cleanup: true

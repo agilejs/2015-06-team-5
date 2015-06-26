@@ -101,8 +101,8 @@ describe('getMovie', function () {
             .withArgs('node_auto_index', 'type', 'movie')
             .yieldsAsync(
                 null,
-                [{data: {title:'Lord of the Rings', description:'Description'}},
-                 {data: {title:'Django Unchained', description:'Another Description'}}]
+                [{data: {title:'Lord of the Rings', description:'Description', releaseYear: '1230'}},
+                 {data: {title:'Django Unchained', description:'Another Description', releaseYear:'1230'}}]
             );
 
         movies.getMovies({}, responseMock);
@@ -113,6 +113,8 @@ describe('getMovie', function () {
             expect(responseData.body).to.have.length(2);
             expect(responseData.body[0]).to.have.property('title')
                 .that.equals('Lord of the Rings');
+            expect(responseData.body[0]).to.have.property('releaseYear')
+            .that.equals('1230');
             done();
         });
     });
