@@ -16,7 +16,7 @@
         $scope.movies = movieList.data;
         $scope.order = 'title';
         $scope.changeOrder = function(){
-            $scope.order  = $scope.order=='title' ? '-title' : 'title';
+            $scope.order  = $scope.order==='title' ? '-title' : 'title';
         }
     });
 
