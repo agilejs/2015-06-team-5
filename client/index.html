@@ -14,15 +14,18 @@
         <div class="navbar-inner">
             <div class="container">
                 <a class="brand" href="/">Movie Database</a>
-                <ul class="nav">
-                    <li class="active">
+                <ul class="nav" ng-controller="NavController">
+                    <li ng-class="{ active: activePath == '/' }">
                         <a href="/">Home</a>
                     </li>
-                    <li>
+                    <li ng-class="{ active: activePath == '/movies' }">
                         <a href="/movies">Movies</a>
                     </li>
-                    <li>
+                    <li ng-class="{ active: activePath == '/actors' }">
                         <a href="/actors">Actors</a>
+                    </li>
+                    <li>
+                      {{activePath}}
                     </li>
                 </ul>
                 <div class="navbar-search pull-right">
