@@ -11,7 +11,7 @@ module.exports = function() {
         browser.get('/movies/new');
     };
 
-    this.addMovie = function(title, desc) {
+    this.addMovie = function(title, desc, releaseYear) {
         this.open();
         this.title.clear();
         this.title.sendKeys(title);
