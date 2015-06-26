@@ -3,6 +3,9 @@
     <tr>
         <th ng-click="changeOrder()">Title</th>
     </tr>
+    <tr>
+        <th ng-click="changeOrder()">Release Year</th>
+    </tr>
     </thead>
     <tbody>
     <tr ng-repeat="movie in movies | orderBy:order">
@@ -10,6 +13,9 @@
             <a href="#" ng-href="/movies/{{movie.id}}">
                 {{movie.title}}
             </a>
+        </td>
+        <td>
+            {{movie.releaseYear}}
         </td>
     </tr>
     </tbody>
