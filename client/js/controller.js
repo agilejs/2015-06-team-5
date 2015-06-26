@@ -17,7 +17,7 @@
         $scope.order = 'title';
         $scope.changeOrder = function(){
             $scope.order  = $scope.order==='title' ? '-title' : 'title';
-        }
+        };
     });
 
     app.controller('MoviesAddController',
