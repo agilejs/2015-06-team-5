@@ -17,6 +17,9 @@
                     {{movie.title}}
                 </a>
             </td>
+            <td>
+                {{movie.releaseYear === undefined ? 'unknown' : movie.releaseYear}}
+            </td>
         </tr>
     </tbody>
 </table>
