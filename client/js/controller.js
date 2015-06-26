@@ -63,6 +63,15 @@
 
     app.controller('NotFoundController', ProblemController);
     app.controller('ErrorController', ProblemController);
+
+    app.controller('NavController',
+        function ($scope, $location, $route) {
+
+        $scope.activePath = null;
+        $scope.$on('$routeChangeSuccess',
+          function() {
+            $scope.activePath = $location.path();
+        });
+    });
+
 })();
-
-
