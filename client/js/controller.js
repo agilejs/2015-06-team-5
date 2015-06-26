@@ -10,15 +10,17 @@
     app.controller('WelcomeController',
         function($scope, $location, movieList) {
         $scope.movies = movieList.data;
+        $scope.order = 'title';
     });
 
     app.controller('MoviesListController',
         function($scope, $location, movieList) {
 
         $scope.movies = movieList.data;
+
         $scope.order = 'title';
-        $scope.changeOrder = function(){
-            $scope.order  = $scope.order==='title' ? '-title' : 'title';
+        $scope.changeOrder = function() {
+            $scope.order  = $scope.order === 'title' ? '-title' : 'title';
         };
     });
 
