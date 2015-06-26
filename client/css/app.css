@@ -6,3 +6,7 @@ body {
     color: darkred;
     font-weight: bold;
 }
+
+.movie-description-editor .ta-editor{
+    min-height: 200px;
+}
