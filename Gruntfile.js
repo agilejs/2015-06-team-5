@@ -93,7 +93,8 @@ module.exports = function (grunt) {
                     browser: true,
                     unused: false,
                     globals: {
-                        angular: false
+                        angular: false,
+                        twttr: false
                     }
                 }
             },
